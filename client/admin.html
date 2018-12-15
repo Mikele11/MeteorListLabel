@@ -1,0 +1,26 @@
+<template name="admin">
+    <h1>List companies</h1>
+    <table id="tableUsersAdmin">
+          <thead>
+              <tr>
+                  <th></th>
+                  <th class="thLogo">Лого</th>
+                  <th data-sortby="companie.name" class="thName">Назва</th>
+                  <th class="thAddress">Адресс</th>
+                  <th data-sortby="companie.name" class="thcountEmploye">Кількість робітників</th>
+                  <th class="rebuild"><input type="button" value="Rebuild"></th>
+              </tr>
+          </thead>
+          {{#each compan}}
+          <tbody class="editableRow">
+            <tr>
+                <th><input class="editable id" type="text" name="" value={{_id}}></th>
+                <th><input class="editable logo" type="text" name="" value="{{logo}}" /></th> 
+                <th><input class="editable name" type="text" name="" value={{name}} ></th> 
+                <th><input class="editable address" type="text" name="" value={{address}} ></th> 
+                <th><input class="editable countEmployee" type="number" name="" value={{countEmployee}} ></th>
+            </tr>
+          </tbody>
+          {{/each}}
+    </table>
+  </template>

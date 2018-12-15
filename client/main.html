@@ -1,0 +1,37 @@
+<head>
+  <title>Label</title>
+</head>
+
+<body class="container">
+</body>
+
+<template name="home">    
+  <div class="dName"><p class="pName">Logo</p><input class="enterInp logo" type="text"/></div>
+  <div class="dName"><p class="pName">Name</p><input class="enterInp name" type="text"/></div>
+  <div class="dName"><p class="pName">Address</p><input class="enterInp address" type="text"/></div>
+  <div class="dName"><p class="pName">Count Employee</p><input class="enterInp countEmploye" type="number"/></div>
+  <input class="addComp" type="submit" value="Add companie">
+  <h1>List companies</h1>
+  <table id="tableUsers">
+        <thead>
+            <tr>
+                <th class="thLogo">Лого</th>
+                <th data-sortby="name" class="thName">Назва</th>
+                <th class="thAddress">Адресс</th>
+                <th data-sortby="countEmployee" class="thcountEmploye">Кількість робітників</th>
+                <th><input class="search" type="text" placeholder="Search"/><input class="searchBtn" type="button" value="Search"></th>
+            </tr>
+        </thead>
+        {{#each comp}}
+        <tbody>
+          <tr>
+              <th>{{logo}}</th> 
+              <th>{{name}}</th> 
+              <th>{{address}}</th> 
+              <th>{{countEmployee}}</th> 
+          </tr>
+        </tbody>
+        {{/each}}
+  </table>
+</template>
+
